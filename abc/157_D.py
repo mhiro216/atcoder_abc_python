@@ -1,7 +1,7 @@
 import sys
 sys.setrecursionlimit(10**6)
 readline = sys.stdin.readline
-n,m,k = [int(i) for i in readline().split()]
+n,m,k = list(map(int, input().split()))
 ab = [[int(i) for i in readline().split()] for _ in range(m)]
 cd = [[int(i) for i in readline().split()] for _ in range(k)]
 

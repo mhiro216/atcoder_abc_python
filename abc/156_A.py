@@ -1,7 +1,4 @@
-import sys
-sys.setrecursionlimit(10**6)
-readline = sys.stdin.readline
-n,r = [int(i) for i in readline().split()]
+n,r = list(map(int, input().split()))
 
 if n >= 10:
     print(r)

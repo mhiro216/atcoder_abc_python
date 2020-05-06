@@ -1,8 +1,8 @@
 import sys
 sys.setrecursionlimit(10**6)
 readline = sys.stdin.readline
-s = readline().rstrip()
-q = int(readline())
+s = input()
+q = int(input())
 queries = [[i for i in readline().split()] for _ in range(q)]
 
 from collections import deque

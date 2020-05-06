@@ -2,7 +2,7 @@ import sys
 sys.setrecursionlimit(10**6)
 readline = sys.stdin.readline
 A = [[int(i) for i in readline().split()] for _ in range(3)]
-n = int(readline())
+n = int(input())
 b = [int(readline()) for _ in range(n)]
 
 for i in range(3):

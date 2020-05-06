@@ -13,21 +13,17 @@ LからRの間の数は全て作れるので、Sを固定したときに取り�
 左端l、右端rの公差1の等差数列の和は
 (l+r)*(r-l+1)/2
 """
-
-import sys
-sys.setrecursionlimit(10**6)
-readline = sys.stdin.readline
-N,K = [int(i) for i in readline().split()]
+n,k = list(map(int, input().split()))
 
 ans = 0
 
 def sum(l, r):
     return (l+r)*(r-l+1)//2
 
-for S in range(K, N+2):
-    L = sum(0, S-1)
-    R = sum(N-S+1, N)
-    ans += (R-L+1)%(10**9+7)
+for s in range(k, n+2):
+    l = sum(0, s-1)
+    r = sum(n-s+1, n)
+    ans += (r-l+1)%(10**9+7)
 
 ans %= 10**9+7
 print(ans)

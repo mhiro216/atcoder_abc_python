@@ -6,12 +6,8 @@ j−i != k−j
 j-i == k-j
 となるような場合の数を求め、*1から引いたものが答え
 """
-
-import sys
-sys.setrecursionlimit(10**6)
-readline = sys.stdin.readline
-n = int(readline())
-s = readline()
+n = int(input())
+s = input()
 
 a = [0]*n
 for i in range(n):

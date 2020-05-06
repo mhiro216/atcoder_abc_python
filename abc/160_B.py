@@ -1,7 +1,4 @@
-import sys
-sys.setrecursionlimit(10**6)
-readline = sys.stdin.readline
-x = int(readline())
+x = int(input())
 
 ans = 0
 

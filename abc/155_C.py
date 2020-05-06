@@ -1,7 +1,7 @@
 import sys
 sys.setrecursionlimit(10**6)
 readline = sys.stdin.readline
-n = int(readline())
+n = int(input())
 s = [readline().rstrip() for _ in range(n)]
 
 import collections

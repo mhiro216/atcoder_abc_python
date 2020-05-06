@@ -1,7 +1,4 @@
-import sys
-sys.setrecursionlimit(10**6)
-readline = sys.stdin.readline
-s = readline()
+s = input()
 
 if s[2] == s[3] and s[4] == s[5]:
     print('Yes')

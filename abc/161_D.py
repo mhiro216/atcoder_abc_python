@@ -5,10 +5,7 @@
 となって、一つ下の桁の数に+1or0or-1した値を末尾につけた数を列挙すれば全て列挙できる
 例：1 -> 10,11,12
 """
-import sys
-sys.setrecursionlimit(10**6)
-readline = sys.stdin.readline
-k = int(readline())
+k = int(input())
 
 Xs = [[i for i in range(1, 10)]]
 for i in range(9):

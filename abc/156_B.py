@@ -1,7 +1,4 @@
-import sys
-sys.setrecursionlimit(10**6)
-readline = sys.stdin.readline
-n,k = [int(i) for i in readline().split()]
+n,k = list(map(int, input().split()))
 
 def Base_10_to_k(n, k):
     if int(n/k): return Base_10_to_k(int(n/k), k)+str(n%k)

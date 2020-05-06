@@ -1,8 +1,5 @@
-import sys
-sys.setrecursionlimit(10**6)
-readline = sys.stdin.readline
-n = int(readline())
-x = [int(i) for i in readline().split()]
+n = int(input())
+x = list(map(int, input().split()))
 
 p1 = sum(x)//n
 p2 = sum(x)//n+1

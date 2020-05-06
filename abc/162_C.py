@@ -1,11 +1,7 @@
 """
 gcd(a,b,c) = gcd(a, gcd(b,c))
 """
-
-import sys
-sys.setrecursionlimit(10**6)
-readline = sys.stdin.readline
-K = int(readline())
+K = int(input())
 
 from math import gcd
 

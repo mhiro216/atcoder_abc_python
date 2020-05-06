@@ -1,7 +1,4 @@
-import sys
-sys.setrecursionlimit(10**6)
-readline = sys.stdin.readline
-n,x,y = [int(i) for i in readline().split()]
+n,x,y = list(map(int, input().split()))
 
 INF = 1001001001
 

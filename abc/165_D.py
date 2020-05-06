@@ -2,29 +2,25 @@
  floor(a/b) 
 =(a-a%b)/b
 上を利用して与えられた式を変形すると
-max (A(x%B)-(Ax%B)) / B
+max (a(x%b)-(ax%b)) / b
 ここで
-Ax%B = A(x%B)%B
-つまり、AxをBで割った余りは、xをBで割った余りにAをかけたものを、Bで割った余り
+ax%b = a(x%b)%b
+つまり、axをbで割った余りは、xをbで割った余りにaをかけたものを、bで割った余り
 を利用すると
-max (A(x%B)-A(x%B)%B) / B
-つまりA(x%B)、さらに言えばx%Bを最大化すれば良い
+max (a(x%b)-a(x%b)%b) / b
+つまりa(x%b)、さらに言えばx%bを最大化すれば良い
 
-x%Bを最大化するには
-N>=B-1 のときは　x=B-1
-N<B-1　のときは x=N
+x%bを最大化するには
+n>=b-1 のときは　x=b-1
+n<b-1　のときは x=n
 """
+a,b,n = list(map(int, input().split()))
 
-import sys
-sys.setrecursionlimit(10**6)
-readline = sys.stdin.readline
-A,B,N = [int(i) for i in readline().split()]
-
-if N >= B-1:
-    x = B-1
+if n >= b-1:
+    x = b-1
 else:
-    x = N
+    x = n
 
-ans = A*x//B - A*(x//B)
+ans = a*x//b - a*(x//b)
 
 print(ans)

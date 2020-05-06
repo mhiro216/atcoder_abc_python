@@ -1,8 +1,5 @@
-import sys
-sys.setrecursionlimit(10**6)
-readline = sys.stdin.readline
-n = readline()
-A = [int(i) for i in readline().split()]
+n = input()
+A = list(map(int, input().split()))
 
 d = {}
 for a in A:

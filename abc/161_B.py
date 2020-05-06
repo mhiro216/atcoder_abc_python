@@ -1,8 +1,5 @@
-import sys
-sys.setrecursionlimit(10**6)
-readline = sys.stdin.readline
-n,m = [int(i) for i in readline().split()]
-a = [int(i) for i in readline().split()]
+n,m = list(map(int, input().split()))
+a = list(map(int, input().split()))
 
 a.sort(reverse=True)
 total = sum(a)

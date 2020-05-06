@@ -1,8 +1,5 @@
-import sys
-sys.setrecursionlimit(10**6)
-readline = sys.stdin.readline
-k,n = [int(i) for i in readline().split()]
-a = [int(i) for i in readline().split()]
+k,n = list(map(int, input().split()))
+a = list(map(int, input().split()))
 
 a.sort()
 a.append(a[0]+k) # 1番目の家とn番目の家の間の距離
