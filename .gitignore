@@ -1,2 +1,6 @@
 # scripts not ready to commit
 not_ready/*
+
+# files created by IDE
+.idea/**/workspace.xml
+.idea/**/tasks.xml
