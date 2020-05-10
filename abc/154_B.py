@@ -1,8 +1,3 @@
-n = int(input())
-a = list(map(int, input().split()))
+s = input()
 
-sa = set(a)
-if len(sa) == n:
-    print('YES')
-else:
-    print('NO')
+print('x'*len(s))
