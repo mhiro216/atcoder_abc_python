@@ -1,3 +1,6 @@
+"""
+deque
+"""
 import sys
 sys.setrecursionlimit(10**6)
 readline = sys.stdin.readline

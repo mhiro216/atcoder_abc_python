@@ -1,3 +1,6 @@
+"""
+queue
+"""
 n,x,y = list(map(int, input().split()))
 
 INF = 1001001001
