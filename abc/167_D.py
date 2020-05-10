@@ -1,24 +1,26 @@
-n,k = list(map(int, input().split()))
-a = list(map(int, input().split()))
+"""
+dp
+"""
 
-init = [1]
-len_loop = -1
-i = 0
+n, k = map(int, input().split())
+a = tuple(map(lambda n: int(n) - 1, input().split()))
 
-while len(init) <= k:
-    nxt = a[init[-1]-1]
-    if nxt in init:
-#        idx_nxt = init.index(nxt, init[i], init[-1])
-        idx_nxt = init.index(nxt)
-        len_init = idx_nxt
-        len_loop = len(init) - idx_nxt
+visited = [0] * n
+next_town = 0
+order = []
+
+while True:
+    if visited[next_town]:
         break
-    else:
-        init.append(nxt)
-    i += 1
+    order.append(next_town)
+    visited[next_town] = 1
+    next_town = a[next_town]
 
-if len_loop == -1:
-    print(init[k])
+first_loop = len(order)
+offset = order.index(next_town)
+second_loop = first_loop - offset
+
+if k < first_loop:
+    print(order[k] + 1)
 else:
-    idx = (k-len_init)%len_loop
-    print(init[len_init+idx])
+    print(order[offset + (k - first_loop) % second_loop] + 1)

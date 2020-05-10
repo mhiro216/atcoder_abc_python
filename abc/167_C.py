@@ -12,10 +12,10 @@ ans = 1001001001
 
 for nc in range(1,n+1):
     lc_sub = list(combinations(lc,nc))
-    for lc_sub2 in lc_sub:
+    for lc_sub_ele in lc_sub:
         tmp_price = 0
         tmp_und = np.array([0]*m)
-        for c in lc_sub2:
+        for c in lc_sub_ele:
             tmp_price += ca[c][0]
             tmp_und += np.array(ca[c][1:])
         if all([und >= x for und in tmp_und]):
