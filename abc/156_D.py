@@ -1,5 +1,5 @@
 """
-nCrのmod
+組み合わせ, nCrのmod
 """
 n,a,b = list(map(int, input().split()))
 
