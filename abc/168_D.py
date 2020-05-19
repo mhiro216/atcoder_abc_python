@@ -20,20 +20,16 @@ for i in range(m):
 import queue
 
 q = queue.Queue()
-searched = [0]*n
 q.put(0)
-searched[0] = 1 # qに突っ込んだ時点でその頂点のsearchedを1にする
 
 while not q.empty():
     v = q.get()
     for i in range(len(to[v])):
         u = to[v][i]
-        if searched[u]: continue
-        if dist[v]+1 < dist[u]:
-            dist[u] = dist[v]+1
-            ans[u] = v
+        if dist[u] != INF: continue # 更新済みならこの後の処理を行わない
+        dist[u] = dist[v]+1
+        ans[u] = v
         q.put(u)
-        searched[u] = 1 # qに突っ込んだ時点でその頂点のsearchedを1にする
 
 if -1 not in ans:
     print('Yes')
