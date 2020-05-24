@@ -1,3 +1,6 @@
+import sys
+sys.setrecursionlimit(10**6)
+
 n = int(input())
 
 ans = 1+n-2
