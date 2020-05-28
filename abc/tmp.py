@@ -2,9 +2,8 @@ import sys
 sys.setrecursionlimit(10**6)
 
 #a = int(input())
-## スペース区切りの整数の入力 -> list
 #b = list(map(int, input().split()))
-## 文字列の入力
+#n, m = map(int, input().split())
 #s = input()
 #s,t = input().split()
 #
