@@ -5,14 +5,14 @@ n = int(input())
 A = list(map(int, input().split()))
 
 ans = 1
-m = 1e18
+MX = 1e18
 
 if 0 in A:
     print(0)
 else:
     for a in A:
         ans *= a
-        if ans > m:
+        if ans > MX:
             print(-1)
             break
     else:
