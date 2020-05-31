@@ -1,7 +1,9 @@
 """
-負辺ありの有向グラフの最短経路問題、ベルマンフォード法
+keyword: ベルマンフォード
 
-pythonでTLE、pypyでAC
+負辺ありの有向グラフの最短経路問題
+
+PythonでTLE、PyPyでAC
 """
 import sys
 sys.setrecursionlimit(10**6)

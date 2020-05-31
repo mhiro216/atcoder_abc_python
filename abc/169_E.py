@@ -1,7 +1,7 @@
 import sys
 sys.setrecursionlimit(10**6)
 
-#a = int(input())
+n = int(input())
 #b = list(map(int, input().split()))
 #n, m = map(int, input().split())
 #s = input()
@@ -10,3 +10,4 @@ sys.setrecursionlimit(10**6)
 #readline = sys.stdin.readline
 #n,m = [int(i) for i in readline().split()]
 #ab = [[int(i) for i in readline().split()] for _ in range(n)]
+
