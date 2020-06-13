@@ -10,7 +10,7 @@ sys.setrecursionlimit(10**6)
 n, m = map(int, input().split())
 A = list(map(int, input().split()))
 
-import heapqs
+import heapq
 
 A = [-a for a in A]
 heapq.heapify(A)
@@ -20,6 +20,6 @@ for _ in range(m):
     heapq.heappush(A, tmp)
     
 ans = 0
-for a in A:s
+for a in A:
     ans += -int(a)
 print(ans)
