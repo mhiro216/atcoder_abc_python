@@ -6,6 +6,7 @@ sys.setrecursionlimit(10**6)
 #n, m = map(int, input().split())
 #s = input()
 #s,t = input().split()
+#a = [int(input()) for _ in range(n)]
 #
 #readline = sys.stdin.readline
 #n,m = [int(i) for i in readline().split()]
