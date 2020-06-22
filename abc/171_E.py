@@ -31,7 +31,7 @@ for i in range(1, n):
 ans = [su]
 
 for i in range(n-1):
-    su = su ^ a[i] ^ a[i+1]
+    su ^= a[i] ^ a[i+1]
     ans.append(su)
     
 print(*ans)
