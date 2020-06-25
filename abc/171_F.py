@@ -20,7 +20,7 @@ mod = 10**9+7
 n = len(s)
 fact = [1, 1] # あとでnの階乗を求める初期値　[0!, 1!]
 
-# n!を求める
+# 考えられるnまでn!を求めておく
 for i in range(2, 2*(10**6)+1):
     fact.append(fact[-1]*i % mod)
 
