@@ -47,6 +47,7 @@ for b in range(2):
             if b == 0: r = (r+k)%npc
             else: r = (r-k+npc)%npc # r-kだけだとマイナスになることがある
             ans[i] = f(r)+1
+        # 2^i(k)のあまりを求める
         k = (k*2)%npc
 
 print(*ans)
