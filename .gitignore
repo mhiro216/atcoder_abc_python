@@ -1,5 +1,5 @@
 # scripts not ready to commit
-not_ready/*
+utils/*
 
 # files created by IDE
 .idea/workspace.xml
