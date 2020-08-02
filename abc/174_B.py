@@ -1,14 +1,17 @@
 import sys
 sys.setrecursionlimit(10**6)
 
-#a = int(input())
-#b = list(map(int, input().split()))
 n, d = map(int, input().split())
-#s = input()
-#s,t = input().split()
-#a = [int(input()) for _ in range(n)]
-#
 readline = sys.stdin.readline
-#n,m = [int(i) for i in readline().split()]
 xy = [[int(i) for i in readline().split()] for _ in range(n)]
 
+import math
+
+ans = 0
+
+for x,y in xy:
+    dist = math.sqrt(pow(x,2) + pow(y,2))
+    if dist <= d:
+        ans += 1
+
+print(ans)
