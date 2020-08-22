@@ -1,5 +1,7 @@
 # 最長増加部分列
 
+import bisect
+
 """
 dp[i] := 最後がaiであるような最長の増加部分列の長さ
 
@@ -12,7 +14,7 @@ dp[i] = max{1, dp[j]+1 | j<i かつ aj<ai}
 """
 
 n = 5
-a = [4,2,3,1,5]
+a = [4, 2, 3, 1, 5]
 
 dp = [0]*n
 
@@ -31,13 +33,12 @@ print(res)
 https://qiita.com/python_walker/items/d1e2be789f6e7a0851e5
 """
 
-import bisect
-
 res = [a[0]]
 for i in range(len(a)):
     if a[i] > res[-1]:
         res.append(a[i])
     else:
-        res[bisect.bisect_left(res, a[i])] = a[i] # bisect.bisect_left(res, a[i])は、resの中にa[i]を入れる場合にa[i]が入るべきインデックスを返す
+        # bisect.bisect_left(res, a[i])は、resの中にa[i]を入れる場合にa[i]が入るべきインデックスを返す
+        res[bisect.bisect_left(res, a[i])] = a[i]
 
 print(len(res))

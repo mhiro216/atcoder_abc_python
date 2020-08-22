@@ -1,30 +1,32 @@
-## fence repair
+# fence repair
 
 N = 3
-L = [8,5,8]
+L = [8, 5, 8]
+
 
 def fence_repair():
     global N
     ans = 0
-    
+
     # 板がN本に切断され終わった状態から考えて、板が1本になるまでwhile loopを適用する
     while N > 1:
         # 一番短い板L[mii1], 次に短い板L[mii2]を求める
-        mii1 = 0; mii2 = 1
+        mii1 = 0
+        mii2 = 1
         if L[mii1] > L[mii2]:
             mii1, mii2 = mii2, mii1
-            
+
         for i in range(2, N):
             if L[i] < L[mii1]:
                 mii2 = mii1
                 mii1 = i
             elif L[i] < L[mii2]:
                 mii2 = i
-        
+
         # L[mii1], L[mii2]が求まったので、それらを合計してコストに加算
         t = L[mii1] + L[mii2]
         ans += t
-        
+
         """
         以降の処理は一見意味が分からないので補足
         
@@ -52,7 +54,8 @@ def fence_repair():
         L[mii1] = t
         L[mii2] = L[N-1]
         N -= 1
-        
+
     return ans
+
 
 print(fence_repair())
